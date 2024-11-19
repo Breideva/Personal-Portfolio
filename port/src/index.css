@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#first .char {
+    transition: all .5s ease-out;
+    transform-origin: bottom;
+    opacity: 0;
+    transform: translateX(500px);
+}
+ #second .char {
+    transform: translateY(-125px) rotateX(180deg);
+    transition: transform .5s linear;
+    opacity: 0;
+}
