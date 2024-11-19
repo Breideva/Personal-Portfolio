@@ -3,7 +3,12 @@ import { gsap } from "gsap";
 import SplitType from "split-type";
 
 export default function Header() {
+  useEffect(() => {
+    const eachLetter = new SplitType("#first");
+    const chars = document.querySelectorAll("#first .char");
+console.log(chars)
 
+  }, []);
 
   useEffect(() => {
     const tl = gsap.timeline({ repeat: -1, yoyo: true });
