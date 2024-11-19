@@ -6,8 +6,56 @@ export default function Header() {
   useEffect(() => {
     const eachLetter = new SplitType("#first");
     const chars = document.querySelectorAll("#first .char");
-console.log(chars)
 
+    const handleMouseEnter = (char, index) => {
+      char.addEventListener("mouseenter", () =>
+        scaleChange(index, char, chars)
+      );
+    };
+
+    const handleMouseLeave = (char, index) => {
+      char.addEventListener("mouseleave", () =>
+        resetTransform(index, char, chars)
+      );
+    };
+
+    chars.forEach((char, index) => {
+      handleMouseEnter(char, index);
+      handleMouseLeave(char, index);
+    });
+
+    const scaleChange = (index, char, chars) => {
+      console.log(char);
+      console.log(`${index}`);
+
+      if (index > 0 && index !== 15) {
+        const firstChar = chars[index - 1];
+        firstChar.style.transform = "scaleY(2)";
+        firstChar.style.color = "black";
+      }
+      if (index < chars.length - 1 && index !== 14) {
+        const thirdChar = chars[index + 1];
+        thirdChar.style.transform = "scaleY(2)";
+        thirdChar.style.color = "black";
+      }
+      char.style.transform = "scaleY(2.25)";
+      char.style.color = "black";
+    };
+
+    const resetTransform = (index, char, chars) => {
+      if (index > 0) {
+        const firstChar = chars[index - 1];
+        firstChar.style.transform = "scaleY(1)";
+        firstChar.style.color = "black";
+      }
+      if (index < chars.length - 1) {
+        const thirdChar = chars[index + 1];
+        thirdChar.style.transform = "scaleY(1)";
+        thirdChar.style.color = "black";
+      }
+      char.style.transform = "scaleY(1)";
+      char.style.color = "black";
+    };
   }, []);
 
   useEffect(() => {
