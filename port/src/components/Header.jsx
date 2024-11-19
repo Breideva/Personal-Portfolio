@@ -56,6 +56,16 @@ export default function Header() {
       char.style.transform = "scaleY(1)";
       char.style.color = "black";
     };
+    return () => {
+      chars.forEach((char) => {
+        char.removeEventListener("mouseenter", () =>
+          scaleChange(index, char, chars)
+        );
+        char.removeEventListener("mouseleave", () =>
+          resetTransform(index, char, chars)
+        );
+      });
+    };
   }, []);
 
   useEffect(() => {
