@@ -69,13 +69,21 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
+    const startChange = setTimeout(() => {
+      document.getElementById("header").style.pointerEvents = "auto";
+    }, 3500);
+
+    return () => clearTimeout(startChange);
+  }, []);
+
+  useEffect(() => {
     const tl = gsap.timeline({ repeat: -1, yoyo: true });
     const Texttl = gsap.timeline({});
 
-    tl.to("#header", {
-      backgroundImage: "linear-gradient(to right bottom, #FFFFFF , #EF9880",
-      duration: 10,
-    });
+    // tl.to("#header", {
+    //   backgroundImage: "linear-gradient(to right bottom, #FFFFFF , #EF9880",
+    //   duration: 10,
+    // });
 
     Texttl.to("#first .char", {
       x: 0,
@@ -100,15 +108,18 @@ export default function Header() {
   return (
     <div
       id="header"
-      className="w-full h-screen flex justify-center items-center overflow-x-hidden"
-      style={{
-        backgroundImage: "linear-gradient(to right top, #EF9880, #FFFFFF)",
-      }}
+      className="w-full flex justify-center items-center sticky top-0 overflow-x-hidden bg-slate-500"
+      style={{ pointerEvents: "none" }}
+      // style={{
+      //   backgroundImage: "linear-gradient(to right top, #EF9880, #FFFFFF)",
+      // }}
     >
-      <div className="w-9/12 h-full flex flex-col justify-center items-center text-center">
+      {/* <div className="w-full h-full bg-black bg-opacity-75 absolute pointer-events-none">
+      </div> */}
+      <div className="w-9/12 h-screen flex flex-col justify-center relative items-center text-center">
         <div className="text-9xl w-full">
           <div className="w-full font-black italic cursor-pointer relative">
-            <h1 id="first" className="w-full h-fit font-narrow ">
+            <h1 id="first" className="w-full font-narrow ">
               EVAN BREIDECKER.{" "}
               <span
                 id="second"
