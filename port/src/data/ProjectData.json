@@ -2,50 +2,46 @@
   "projects": [
     {
       "title": "MSM",
-      "type": "Landing Page",
+      "type": "Business Contact Page",
       "icons": ["github", "website"],
-      "desc": "font-semibold italic SKILLS Lorem ipsum, natus nesciunt commodi beatae at quidem? Excepturi dicta eaque repellendus officiis optio cum, alias tempora est recusandae, aspernatur suscipit doloremque vel quisquam dolore ullam.",
-      "lang": ["Javascript", "React", "TailwindCss"]
+      "desc": "A website built for Marine Services and Management(a marine company based in Florida) using React for a dynamic, component-based structure. It features five pages: Home, About, Projects, FAQs, and Contact, with the Contact page utilizing Web3Forms for secure form submissions. Optimized with Vite for fast loading, the site showcases the company’s expertise and services while ensuring smooth, interactive user experiences across all devices.",
+      "lang": ["Vite", "React", "Web3Forms", "FileZilla"]
     },
     {
       "title": "Press Play",
-      "type": "Landing Page",
+      "type": "Game Library & Profile",
       "icons": "github",
-
-      "desc": "font-semibold italic SKILLS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis impedit natus nesciunt commodi beatae at quidem? Excepturi dicta eaque repellendus officiis optio cum, alias tempora est recusandae, aspernatur suscipit doloremque vel quisquam dolore ullam.",
-      "lang": ["Javascript", "React", "TailwindCss"]
-    },
-    {
-      "title": "Feed Me Flavor",
-      "type": "Landing Page",
-      "icons": "github",
-
-      "desc": "font-semibold italic SKILLS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis impedit natus nesciunt commodi beatae at quidem? Excepturi dicta eaque repellendus officiis optio cum, alias tempora est recusandae, aspernatur suscipit doloremque vel quisquam dolore ullam.",
-      "lang": ["Javascript", "React", "TailwindCss"]
+      "desc": "A project utilizing the RAWG API to create an interactive video game library, allowing users to explore and discover games from a vast database. The platform features a profile system that leverages local storage to save users' favorite games, providing a personalized experience. Built with React and Tailwind CSS, the site offers a responsive design, smooth navigation, and engaging animations powered by GSAP and Swiper, ensuring a dynamic and enjoyable user experience.",
+      "lang": ["React", "TailwindCss", "GSAP", "Swiper", "RAWG API"]
     },
     {
       "title": "Card Quest",
-      "type": "Landing Page",
+      "type": "Interactive Card Game",
       "icons": "github",
-
-      "desc": "font-semibold italic SKILLS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis impedit natus nesciunt commodi beatae at quidem? Excepturi dicta eaque repellendus officiis optio cum, alias tempora est recusandae, aspernatur suscipit doloremque vel quisquam dolore ullam.",
-      "lang": ["Javascript", "React", "TailwindCss"]
+      "desc": "This project reimagines the classic card game Ride the Bus with a dynamic, interactive digital version built entirely using JavaScript for all game functionality. The game features intuitive controls, smooth animations, and a point-scoring system where users can draw cards, make decisions, and track their progress. Designed to be simple and fun, the game includes easy-to-understand rules at the start, allowing anyone to jump in and try to top their score.",
+      "lang": ["Javascript", "GSAP"]
+    },
+    {
+      "title": "Feed Me Flavor",
+      "type": "Recipe Library",
+      "icons": "github",
+      "desc": "Using this project as a gateway to APIs, I chose the Spoonacular API to build a dynamic recipe library, giving users access to a wide variety of recipes, ingredients, and nutritional information. Built with React and styled using Tailwind CSS, the site features a clean, easy-to-use UI that’s responsive across devices. The app fetches data from the API to display detailed recipes, with added animations and interactive carousels from Swiper to enhance the user experience.",
+      "lang": ["React", "TailwindCss", "GSAP", "Swiper", "Spoonacular API"]
     },
     {
       "title": "Mr.8Ball",
-      "type": "Landing Page",
+      "type": "Interactive Magic 8-Ball",
       "icons": "github",
-
-      "desc": "font-semibold italic SKILLS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis impedit natus nesciunt commodi beatae at quidem? Excepturi dicta eaque repellendus officiis optio cum, alias tempora est recusandae, aspernatur suscipit doloremque vel quisquam dolore ullam.",
-      "lang": ["Javascript", "React", "TailwindCss"]
+      "desc": "The project features an interactive 8-Ball that generates responses to interrogative questions, providing users with a fun and engaging experience. The site allows users to input any question and receive randomized answers. The application uses JavaScript to handle the logic behind generating responses, delivering a smooth and playful experience for users across all devices.",
+      "lang": ["Javascript"]
     },
     {
-      "title": "St.Louis Venture",
-      "type": "Landing Page",
+      "title": "Arch Adventure",
+      "type": "City Guide",
       "icons": "github",
 
-      "desc": "font-semibold italic SKILLS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis impedit natus nesciunt commodi beatae at quidem? Excepturi dicta eaque repellendus officiis optio cum, alias tempora est recusandae, aspernatur suscipit doloremque vel quisquam dolore ullam.",
-      "lang": ["Javascript", "React", "TailwindCss"]
+      "desc": "The Arch Adventure was built using JavaScript and Bootstrap to create a great guide to exploring the St. Louis's food, attractions, and map locations. It features interactive sections with detailed information on local restaurants, events, and landmarks, providing an easy-to-navigate resource for both locals and tourists. The site’s layout is designed with Bootstrap for seamless responsiveness, ensuring optimal viewing across all devices.",
+      "lang": ["Javascript", "Bootstrap", "Framer Motion"]
     }
   ]
 }
