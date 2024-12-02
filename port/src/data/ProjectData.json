@@ -1,0 +1,51 @@
+{
+  "projects": [
+    {
+      "title": "MSM",
+      "type": "Landing Page",
+      "icons": ["github", "website"],
+      "desc": "font-semibold italic SKILLS Lorem ipsum, natus nesciunt commodi beatae at quidem? Excepturi dicta eaque repellendus officiis optio cum, alias tempora est recusandae, aspernatur suscipit doloremque vel quisquam dolore ullam.",
+      "lang": ["Javascript", "React", "TailwindCss"]
+    },
+    {
+      "title": "Press Play",
+      "type": "Landing Page",
+      "icons": "github",
+
+      "desc": "font-semibold italic SKILLS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis impedit natus nesciunt commodi beatae at quidem? Excepturi dicta eaque repellendus officiis optio cum, alias tempora est recusandae, aspernatur suscipit doloremque vel quisquam dolore ullam.",
+      "lang": ["Javascript", "React", "TailwindCss"]
+    },
+    {
+      "title": "Feed Me Flavor",
+      "type": "Landing Page",
+      "icons": "github",
+
+      "desc": "font-semibold italic SKILLS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis impedit natus nesciunt commodi beatae at quidem? Excepturi dicta eaque repellendus officiis optio cum, alias tempora est recusandae, aspernatur suscipit doloremque vel quisquam dolore ullam.",
+      "lang": ["Javascript", "React", "TailwindCss"]
+    },
+    {
+      "title": "Card Quest",
+      "type": "Landing Page",
+      "icons": "github",
+
+      "desc": "font-semibold italic SKILLS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis impedit natus nesciunt commodi beatae at quidem? Excepturi dicta eaque repellendus officiis optio cum, alias tempora est recusandae, aspernatur suscipit doloremque vel quisquam dolore ullam.",
+      "lang": ["Javascript", "React", "TailwindCss"]
+    },
+    {
+      "title": "Mr.8Ball",
+      "type": "Landing Page",
+      "icons": "github",
+
+      "desc": "font-semibold italic SKILLS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis impedit natus nesciunt commodi beatae at quidem? Excepturi dicta eaque repellendus officiis optio cum, alias tempora est recusandae, aspernatur suscipit doloremque vel quisquam dolore ullam.",
+      "lang": ["Javascript", "React", "TailwindCss"]
+    },
+    {
+      "title": "St.Louis Venture",
+      "type": "Landing Page",
+      "icons": "github",
+
+      "desc": "font-semibold italic SKILLS Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat nobis impedit natus nesciunt commodi beatae at quidem? Excepturi dicta eaque repellendus officiis optio cum, alias tempora est recusandae, aspernatur suscipit doloremque vel quisquam dolore ullam.",
+      "lang": ["Javascript", "React", "TailwindCss"]
+    }
+  ]
+}
