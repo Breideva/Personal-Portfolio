@@ -15,47 +15,45 @@ export default function Projects({}) {
 
   const { hash } = useLocation();
 
-useEffect(() => {
-  if (hash) {
-    const target = document.querySelector(hash);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
+  useEffect(() => {
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
     }
-  }
-}, [hash]);
+  }, [hash]);
 
   useEffect(() => {
     // const tl = gsap.timeline({ repeat: -1, yoyo: true });
-
     // tl.to("#projects", {
     //   backgroundImage: "linear-gradient(to left bottom, #FFFFFF , #F7934C",
     //   duration: 10,
     // });
-
-  //   gsap.to(".box", {
-  //     scrollTrigger: {
-  //       trigger: "#projects",
-  //       start: "top 80%",
-  //       end: "top 5%",
-  //       scrub: 1,
-  //     },
-  //     opacity: 1,
-  //     y: 0,
-  //     duration: 0.2,
-  //     stagger: 0.03,
-  //   });
-  //   gsap.to(".box-2", {
-  //     scrollTrigger: {
-  //       trigger: ".box",
-  //       start: "top 70%",
-  //       end: "top 20%",
-  //       scrub: 1,
-  //     },
-  //     opacity: 1,
-  //     y: 0,
-  //     duration: 0.2,
-  //     stagger: 0.03,
-  //   });
+    //   gsap.to(".box", {
+    //     scrollTrigger: {
+    //       trigger: "#projects",
+    //       start: "top 80%",
+    //       end: "top 5%",
+    //       scrub: 1,
+    //     },
+    //     opacity: 1,
+    //     y: 0,
+    //     duration: 0.2,
+    //     stagger: 0.03,
+    //   });
+    //   gsap.to(".box-2", {
+    //     scrollTrigger: {
+    //       trigger: ".box",
+    //       start: "top 70%",
+    //       end: "top 20%",
+    //       scrub: 1,
+    //     },
+    //     opacity: 1,
+    //     y: 0,
+    //     duration: 0.2,
+    //     stagger: 0.03,
+    //   });
   }, []);
 
   return (
@@ -68,14 +66,16 @@ useEffect(() => {
       }}
     >
       <div className="w-9/12 h-full flex flex-col items-center text-text">
-        <div className="py-8 text-6xl xl:text-8xl font-narrow flex flex-col items-center justify-center text-center">
-          <div className="font-semibold text-textLoud">PROJECTS</div>
-          <div className="text-base xl:text-xl">
-            Featuring personal projects and a professional client project
+        <div className="py-8 font-narrow flex flex-col items-center justify-center text-center">
+          <div className="font-semibold text-textLoud text-6xl sm:text-7xl md:text-8xl ">
+            PROJECTS
+          </div>
+          <div className="text-base md:text-lg xl:text-xl">
+            Showcasing Personal Projects and Professional Client Work
           </div>
         </div>
         <div className="py-8 font-narrow">
-          <ProjectTabs/>
+          <ProjectTabs />
         </div>
       </div>
     </div>
