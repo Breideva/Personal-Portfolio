@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProjectTabs from "./ProjectTabs";
-import MediumWide from "../assets/GrassBeach.avif";
+import { useLocation } from "react-router-dom";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Projects({}) {
@@ -12,104 +13,69 @@ export default function Projects({}) {
     console.log(selectedTitle);
   }, [selectedTitle]);
 
+  const { hash } = useLocation();
+
+useEffect(() => {
+  if (hash) {
+    const target = document.querySelector(hash);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+}, [hash]);
+
   useEffect(() => {
-    gsap.to(".box", {
-      scrollTrigger: {
-        trigger: "#projects",
-        start: "top 80%",
-        end: "top 20%",
-        scrub: 1,
-      },
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      stagger: 0.1,
-    });
-    gsap.to(".box-2", {
-      scrollTrigger: {
-        trigger: ".box",
-        start: "top 60%",
-        end: "top 20%",
-        scrub: 1,
-      },
-      opacity: 1,
-      y: 0,
-      duration: 0.8,
-      stagger: 0.05,
-    });
+    // const tl = gsap.timeline({ repeat: -1, yoyo: true });
+
+    // tl.to("#projects", {
+    //   backgroundImage: "linear-gradient(to left bottom, #FFFFFF , #F7934C",
+    //   duration: 10,
+    // });
+
+  //   gsap.to(".box", {
+  //     scrollTrigger: {
+  //       trigger: "#projects",
+  //       start: "top 80%",
+  //       end: "top 5%",
+  //       scrub: 1,
+  //     },
+  //     opacity: 1,
+  //     y: 0,
+  //     duration: 0.2,
+  //     stagger: 0.03,
+  //   });
+  //   gsap.to(".box-2", {
+  //     scrollTrigger: {
+  //       trigger: ".box",
+  //       start: "top 70%",
+  //       end: "top 20%",
+  //       scrub: 1,
+  //     },
+  //     opacity: 1,
+  //     y: 0,
+  //     duration: 0.2,
+  //     stagger: 0.03,
+  //   });
   }, []);
 
   return (
     <div
       id="projects"
-      className="w-full h-[125vh] flex justify-center items-center relative bg-slate-400 "
-      //   style={{
-      //     backgroundImage: "linear-gradient(to left bottom, #EF9880, #FFFFFF)",
-      //   }}
+      className="w-full flex justify-center items-center relative bg-bg"
+      style={{
+        borderTop: "1px solid rgba(19, 1, 2, 0.1)",
+        // background: "linear-gradient(155deg, #E7D3BB 30%, #F02F34, #E7D3BB 60%)"
+      }}
     >
-      <div className="w-9/12 h-full flex py-8 border-t-2 border-white">
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid-flow-dense gap-x-8">
-          <div className="w-full h-full box col-span-1">
-            <ProjectTabs
-              image={MediumWide}
-              height="3/4"
-              title="Press Play"
-              type="Video Game Library"
-              desc=""
-              lang={["React", "TailwindCSS", "RAWG API"]}
-            />
+      <div className="w-9/12 h-full flex flex-col items-center text-text">
+        <div className="py-8 text-6xl xl:text-8xl font-narrow flex flex-col items-center justify-center text-center">
+          <div className="font-semibold text-textLoud">PROJECTS</div>
+          <div className="text-base xl:text-xl">
+            Featuring personal projects and a professional client project
           </div>
-          <div className="box col-span-1">
-            <ProjectTabs
-              image={MediumWide}
-              height="3/4"
-              title="Feed Me Flavor"
-              type="Recipe Library"
-              desc=""
-              lang={["Javascript, React, TailwindCss, Spoonacular API"]}
-            />
-          </div>
-          <div className="box col-span-1">
-            <ProjectTabs
-              image={MediumWide}
-              height="3/4"
-              title="Card Quest"
-              type="Card Game"
-              desc=""
-              lang={["Javascript"]}
-            />
-          </div>
-          <div className="box-2 col-span-1">
-            <ProjectTabs
-              image={MediumWide}
-              height="3/4"
-              title="MSM"
-              type="Landing Page"
-              desc=""
-              lang={["Javascript, React, TailwindCss"]}
-            />
-          </div>
-          <div className="box-2 col-span-1">
-            <ProjectTabs
-              image={MediumWide}
-              height="3/4"
-              title="Mr.8Ball"
-              type="Interactive Game"
-              desc=""
-              lang={["Javascript"]}
-            />
-          </div>
-          <div className="box-2 col-span-1">
-            <ProjectTabs
-              image={MediumWide}
-              height="3/4"
-              title="St.Louis Co"
-              type="Location Site"
-              desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos in
-        numquam natus aliquid autem amet eaque molestiae cum inventore aperiam!"
-              lang="Javascript, React, TailwindCss, APi"
-            />
-          </div>
+        </div>
+        <div className="py-8 font-narrow">
+          <ProjectTabs/>
         </div>
       </div>
     </div>
