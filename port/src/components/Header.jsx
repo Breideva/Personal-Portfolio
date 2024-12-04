@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import SplitType from "split-type";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
+import { IoLogoGithub, IoMail, IoLogoLinkedin } from "react-icons/io5";
+
 export default function Header() {
   useEffect(() => {
     const eachLetter = new SplitType("#first");
@@ -105,15 +107,42 @@ export default function Header() {
           }, 500);
         },
       })
-      .to("#arrow", {
+      .to("#mail", {
+        x: 0,
+
+        duration: 0.1,
+        delay: 0.5,
         opacity: 1,
-        delay: .5,
       })
-      .to("#arrow", {
-        y: -15,
-        yoyo: true,
-        repeat: -1,
-      });
+      .to("#github", {
+        x: 0,
+        duration: 0.1,
+        delay: 0.1,
+        opacity: 1,
+      })
+      .to("#linkedin", {
+        x: 0,
+        duration: 0.1,
+        delay: 0.1,
+        opacity: 1,
+      })
+      .to(
+        "#arrow",
+        {
+          opacity: 1,
+          delay: 0.5,
+        },
+        [3]
+      )
+      .to(
+        "#arrow",
+        {
+          y: -15,
+          yoyo: true,
+          repeat: -1,
+        },
+        [3]
+      );
   }, []);
 
   return (
@@ -123,12 +152,32 @@ export default function Header() {
       style={{
         pointerEvents: "none",
         // backgroundImage: "linear-gradient(to left bottom, #09225D 10%, #B4C8F8)",
-        transition: "all 3s linear"
+        transition: "all 3s linear",
       }}
       // style={{
       //   backgroundImage: "linear-gradient(to right top, #EF9880, #FFFFFF)",
       // }}
     >
+      <div
+        className="text-5xl flex justify-center gap-4 items-center pb-2 w-fit absolute top-4 right-4 text-text"
+        // style={{
+        //   borderBottom: "1px solid rgba(19, 1, 2, 0.1)",
+        // }}
+      >
+        <a id="mail" href="mailto:evanbreidecker@gmail.com">
+          <IoMail className="p-1 rounded-md bg-bgSkillBox transition-all duration-300 hover:scale-105 hover:bg-bgBox" />
+        </a>
+        <a id="github" href="https://github.com/Breideva">
+          {" "}
+          <IoLogoGithub className="p-1 rounded-md bg-bgSkillBox transition-all duration-300 hover:scale-105 hover:bg-bgBox" />
+        </a>
+        <a
+          id="linkedin"
+          href="https://www.linkedin.com/in/evan-breidecker-917211265/"
+        >
+          <IoLogoLinkedin className="p-1 rounded-md bg-bgSkillBox transition-all duration-300 hover:scale-105 hover:bg-bgBox" />
+        </a>
+      </div>
       {/* <div className="w-full h-full bg-black bg-opacity-75 absolute pointer-events-none">
       </div> */}
       <div className="w-9/12 h-screen flex flex-col justify-center relative items-center text-center">
