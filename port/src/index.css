@@ -3,22 +3,34 @@
 @tailwind utilities;
 
 #first .char {
-    transition: all .5s ease-out;
-    transform-origin: bottom;
-    opacity: 0;
-    transform: translateX(500px);
+  transition: all 0.5s ease-out;
+  transform-origin: bottom;
+  opacity: 0;
+  transform: translateX(500px);
 }
- #second .char {
-    transform: translateY(-125px) rotateX(180deg);
-    transition: transform .5s linear;
-    opacity: 0;
+#second .char {
+  transform: translateY(-125px) rotateX(180deg);
+  transition: all 0.4s ease-out;
+  transform-origin: bottom;
+  opacity: 0;
+}
+#mail,
+#github,
+#linkedin {
+  transition: all 0.5s ease-out;
+  transform-origin: bottom;
+  opacity: 0;
+  transform: translateX(500px);
+}
+#arrow {
+  opacity: 0;
 }
 .box,
 .box-2 {
-    transform: translateY(250px);
-    transition: transform .5s linear;
-    opacity: 0;
+  transform: translateY(250px);
+  transition: all 0.1s linear;
+  opacity: 0;
 }
-::-webkit-scrollbar{
-    display: none;
+::-webkit-scrollbar {
+  display: none;
 }
