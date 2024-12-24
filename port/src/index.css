@@ -13,6 +13,27 @@
   transition: all 0.4s ease-out;
   transform-origin: bottom;
   opacity: 0;
+  font-size: 24px;
+}
+@media (min-width: 640px) {
+  #second .char {
+    font-size: 30px;
+  }
+}
+@media (min-width: 768px) {
+  #second .char {
+    font-size: 48px;
+  }
+}
+@media (min-width: 1024px) {
+  #second .char {
+    font-size: 60px;
+  }
+}
+@media (min-width: 1280px) {
+  #second .char {
+    font-size: 72px;
+  }
 }
 #mail,
 #github,
@@ -25,10 +46,75 @@
 #arrow {
   opacity: 0;
 }
-.box,
-.box-2 {
+#box0,
+#box1,
+#box2,
+#box3,
+#box4,
+#box5 {
   transform: translateY(250px);
   transition: all 0.1s linear;
+  opacity: 0;
+}
+#skill0,
+#skill1,
+#skill2,
+#skill3,
+#skill4,
+#skill5,
+#skill6,
+#skill7,
+#skill8,
+#skill9 {
+  transform: translateY(50px);
+  transition: all 0.1s linear;
+  opacity: 0;
+}
+#tech0,
+#tech1,
+#tech2,
+#tech3,
+#tech4,
+#tech5,
+#tech6,
+#tech7,
+#tech8,
+#tech9 {
+  transform: translateY(50px);
+  transition: all 0.1s linear;
+  opacity: 0;
+}
+#img0,
+#img1,
+#img2,
+#img3,
+#img4,
+#img5,
+#img6,
+#img7,
+#img8,
+#img9 {
+  transform: translateY(50px);
+  transition: all 0.1s linear;
+  opacity: 0;
+}
+#desc {
+  transform: translateY(50px);
+  transition: all 0.1s linear;
+  opacity: 0;
+}
+
+#projects,
+#skills,
+#about,
+.title {
+  transform: translateX(-100px);
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+#social {
+  transform: translateX(-50px);
+  transition: all 0.5s ease-in-out;
   opacity: 0;
 }
 ::-webkit-scrollbar {

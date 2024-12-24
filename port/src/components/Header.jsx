@@ -7,7 +7,7 @@ import { IoLogoGithub, IoMail, IoLogoLinkedin } from "react-icons/io5";
 
 export default function Header() {
   useEffect(() => {
-    const eachLetter = new SplitType("#first");
+    new SplitType("#first");
     const chars = document.querySelectorAll("#first .char");
 
     const handleMouseEnter = (char, index) => {
@@ -34,15 +34,15 @@ export default function Header() {
       if (index > 0 && index !== 15) {
         const firstChar = chars[index - 1];
         firstChar.style.transform = "scaleY(2)";
-        firstChar.style.color = "#130102";
+        // firstChar.style.color = "#130102";
       }
       if (index < chars.length - 1 && index !== 14) {
         const thirdChar = chars[index + 1];
         thirdChar.style.transform = "scaleY(2)";
-        thirdChar.style.color = "#130102";
+        // thirdChar.style.color = "#130102";
       }
       char.style.transform = "scaleY(2.25)";
-      char.style.color = "#130102";
+      // char.style.color = "#130102";
     };
 
     const resetTransform = (index, char, chars) => {
@@ -80,13 +80,7 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1, yoyo: true });
     const Texttl = gsap.timeline({});
-
-    // tl.to("#header", {
-    //   backgroundImage: "linear-gradient(to right bottom, #B4C8F8 10%, #09225D",
-    //   duration: 10,
-    // });
 
     Texttl.to("#first .char", {
       x: 0,
@@ -151,18 +145,12 @@ export default function Header() {
       className="w-full flex justify-center items-center sticky top-0 overflow-x-hidden bg-bg text-textLoud"
       style={{
         pointerEvents: "none",
-        // backgroundImage: "linear-gradient(to left bottom, #09225D 10%, #B4C8F8)",
         transition: "all 3s linear",
       }}
-      // style={{
-      //   backgroundImage: "linear-gradient(to right top, #EF9880, #FFFFFF)",
-      // }}
+    
     >
       <div
-        className="text-5xl flex justify-center gap-4 items-center pb-2 w-fit absolute top-4 right-4 text-text"
-        // style={{
-        //   borderBottom: "1px solid rgba(19, 1, 2, 0.1)",
-        // }}
+        className="text-3xl sm:text-4xl md:text-5xl flex justify-center gap-4 items-center pb-2 w-fit absolute top-4 right-4 text-text"
       >
         <a id="mail" href="mailto:evanbreidecker@gmail.com">
           <IoMail className="p-1 rounded-md bg-bgSkillBox transition-all duration-300 hover:scale-105 hover:bg-bgBox" />
@@ -180,14 +168,14 @@ export default function Header() {
       </div>
       {/* <div className="w-full h-full bg-black bg-opacity-75 absolute pointer-events-none">
       </div> */}
-      <div className="w-9/12 h-screen flex flex-col justify-center relative items-center text-center">
-        <div className="xl:text-9xl w-full z-10">
+      <div className="w-full h-screen flex flex-col justify-center relative items-center text-center">
+        <div className="w-full z-10">
           <div className="w-full font-black italic cursor-pointer relative">
-            <h1 id="first" className="w-full font-narrow ">
+            <h1 id="first" className="w-full font-narrow text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl">
               EVAN BREIDECKER.{" "}
               <span
                 id="second"
-                className="xl:text-6xl"
+                className="text-xl"
                 style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
               >
                 Front-End Developer
