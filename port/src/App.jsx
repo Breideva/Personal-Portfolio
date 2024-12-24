@@ -6,9 +6,9 @@ import DisplayProject from "./pages/DisplayProject";
 export default function App() {
   return (
     <>
-      <Router>
+      <Router basename="/Personal-Portfolio">
         <Routes>
-          <Route path="/project" element={<DisplayProject />} />
+          {/* <Route path="/project" element={<DisplayProject />} /> */}
           <Route path="/" element={<Home />} />
         </Routes>
       </Router>
