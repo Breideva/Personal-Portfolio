@@ -186,7 +186,7 @@ export default function About() {
             </span>
             and{" "}
             <span className="bg-gradient-to-r from-textLoud via-text to-textLoud text-transparent bg-clip-text">
-              React{" "}
+              React
             </span>
             . I have a strong passion for designing minimalistic yet powerful
             websites, always prioritizing user-friendly and visually appealing
