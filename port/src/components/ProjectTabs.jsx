@@ -61,7 +61,7 @@ export default function ProjectTabs({}) {
                   {item.icons == "website" ? (
                     <div className="flex gap-2 text-xl sm:text-2xl md:text-3xl">
                       <a
-                        href="https://github.com/Breideva"
+                        href="https://github.com/Breideva/MSM"
                         className="hover:text-textLoud transition-all duration-300"
                       >
                         <FaGithub />
@@ -76,13 +76,13 @@ export default function ProjectTabs({}) {
                   ) : (
                     <div className="flex gap-2 text-xl sm:text-2xl md:text-3xl">
                       <a
-                        href="https://github.com/Breideva"
+                        href={item.link2}
                         className="hover:text-textLoud transition-all duration-300"
                       >
                         <FaGithub />
                       </a>
                       <a
-                        href={item.link}
+                        href={item.link1}
                         className="hover:text-textLoud transition-all duration-300"
                       >
                         <FaPlayCircle />
