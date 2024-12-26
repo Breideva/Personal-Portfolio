@@ -223,7 +223,7 @@ export default function About() {
             <IoLogoLinkedin className="p-1 rounded-md bg-bgSkillBox transition-all duration-300 hover:scale-105 hover:bg-bgBox" />
           </a>
         </div>
-        <a href="/" className="text-textLoud mb-8">
+        <a href="https://github.com/Breideva/Personal-Portfolio" className="text-textLoud mb-8">
           Portfolio Code
         </a>
       </div>
