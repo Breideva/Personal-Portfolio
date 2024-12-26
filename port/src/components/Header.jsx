@@ -150,7 +150,7 @@ export default function Header() {
         transition: "all 3s linear",
       }}
     >
-      <div className="text-3xl sm:text-4xl md:text-5xl flex justify-center gap-4 items-center pb-2 w-fit absolute top-4 right-4 text-text">
+      <div className="text-3xl sm:text-4xl md:text-5xl flex justify-center gap-4 items-center pb-2 w-fit absolute top-4 right-4 text-text z-30">
         <a id="mail" href="mailto:evanbreidecker@gmail.com">
           <IoMail className="p-1 rounded-md bg-bgSkillBox transition-all duration-300 hover:scale-105 hover:bg-bgBox" />
         </a>
