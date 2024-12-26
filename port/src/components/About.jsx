@@ -13,8 +13,8 @@ import {
   SiTailwindcss,
   SiBootstrap,
   SiFigma,
-  SiVite,
-  SiFramer,
+  SiNextdotjs,
+  SiTypescript
 } from "react-icons/si";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -28,8 +28,8 @@ const names = [
   "React",
   "Bootstrap",
   "Figma",
-  "Vite",
-  "Framer",
+  "Next.js",
+  "TypeScript",
   "Node",
 ];
 const icons = [
@@ -40,8 +40,8 @@ const icons = [
   IoLogoReact,
   SiBootstrap,
   SiFigma,
-  SiVite,
-  SiFramer,
+  SiNextdotjs,
+  SiTypescript,
   IoLogoNodejs,
 ];
 
@@ -223,7 +223,10 @@ export default function About() {
             <IoLogoLinkedin className="p-1 rounded-md bg-bgSkillBox transition-all duration-300 hover:scale-105 hover:bg-bgBox" />
           </a>
         </div>
-        <a href="https://github.com/Breideva/Personal-Portfolio" className="text-textLoud mb-8">
+        <a
+          href="https://github.com/Breideva/Personal-Portfolio"
+          className="text-textLoud mb-8"
+        >
           Portfolio Code
         </a>
       </div>
