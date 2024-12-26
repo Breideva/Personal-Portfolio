@@ -8,7 +8,8 @@ import { IoLogoGithub, IoMail, IoLogoLinkedin } from "react-icons/io5";
 export default function Header() {
   useEffect(() => {
     new SplitType("#first");
-    const chars = document.querySelectorAll("#first .char");
+    new SplitType("#second");
+    const chars = document.querySelectorAll("#letters .char");
 
     const handleMouseEnter = (char, index) => {
       char.addEventListener("mouseenter", () =>
@@ -92,6 +93,7 @@ export default function Header() {
     })
       .to("#second .char", {
         y: 0,
+        rotationX: 0,
         stagger: 0.04,
         duration: 0.1,
         opacity: 1,
@@ -147,11 +149,8 @@ export default function Header() {
         pointerEvents: "none",
         transition: "all 3s linear",
       }}
-    
     >
-      <div
-        className="text-3xl sm:text-4xl md:text-5xl flex justify-center gap-4 items-center pb-2 w-fit absolute top-4 right-4 text-text"
-      >
+      <div className="text-3xl sm:text-4xl md:text-5xl flex justify-center gap-4 items-center pb-2 w-fit absolute top-4 right-4 text-text">
         <a id="mail" href="mailto:evanbreidecker@gmail.com">
           <IoMail className="p-1 rounded-md bg-bgSkillBox transition-all duration-300 hover:scale-105 hover:bg-bgBox" />
         </a>
@@ -170,17 +169,20 @@ export default function Header() {
       </div> */}
       <div className="w-full h-screen flex flex-col justify-center relative items-center text-center">
         <div className="w-full z-10">
-          <div className="w-full font-black italic cursor-pointer relative">
-            <h1 id="first" className="w-full font-narrow text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl">
+          <div id="letters" className="w-full flex flex-col gap-2 md:gap-4 xl:gap-8 font-black italic cursor-pointer relative font-narrow ">
+            <h1
+              id="first"
+              className="w-full flex text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl"
+            >
               EVAN BREIDECKER.{" "}
-              <span
-                id="second"
-                className="text-xl"
-                style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
-              >
-                Front-End Developer
-              </span>
             </h1>
+            <h2
+              id="second"
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl"
+              style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
+            >
+              Front-End Developer
+            </h2>
           </div>
         </div>
         <div className="w-full h-full absolute flex justify-center items-end text-7xl z-0 text-text">

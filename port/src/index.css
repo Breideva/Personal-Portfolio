@@ -13,27 +13,7 @@
   transition: all 0.4s ease-out;
   transform-origin: bottom;
   opacity: 0;
-  font-size: 24px;
-}
-@media (min-width: 640px) {
-  #second .char {
-    font-size: 30px;
-  }
-}
-@media (min-width: 768px) {
-  #second .char {
-    font-size: 48px;
-  }
-}
-@media (min-width: 1024px) {
-  #second .char {
-    font-size: 60px;
-  }
-}
-@media (min-width: 1280px) {
-  #second .char {
-    font-size: 72px;
-  }
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 #mail,
 #github,
